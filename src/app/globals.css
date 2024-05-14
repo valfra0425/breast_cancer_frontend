@@ -87,12 +87,10 @@ body {
 
 body {
   color: rgb(var(--background-end-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--foreground-rgb))
-    )
-    rgb(var(--foreground-rgb));
+  /* Creditos da imagem ao: https://www.freepik.com */
+  background-image: url('../../public/bg-ribbon.jpg');
+  background-size: cover;
+  background-position: top right;
 }
 
 a {

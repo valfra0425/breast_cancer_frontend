@@ -1,13 +1,14 @@
 .main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
-.white {
+.text {
   color: #ffffff;
+  text-align: justify;
 }
 
 .center {
@@ -16,35 +17,15 @@
   justify-content: center;
 }
 
-.divButtonContainer {
-  width: 77%;
-}
-
 .divButton {
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
   justify-content: center;
   padding: 3rem 5rem;
-  width: 65%;
-  background-color: #FFB6C1;
+  width: 55%;
+  background-color: #ffa0af;
   border-radius: 30px;
-}
-
-.divLogo {
-  min-height: 100vh;
-  width: 23%;
-  background-color: #FFB6C1;
-  padding: 6rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.textLogo {
-  color: #ffffff;
-  text-align: center;
-  font-size: x-large;
-  margin-top: 20px;
 }
 
 .btn {
@@ -54,10 +35,12 @@
   border-color: white;
   margin-bottom: 30px;
   background-color: #ff5599;
-  padding: 10px 40px;
+  padding: 15px 40px;
   border-radius: 30px;
   font-size: large;
   transition: background-color 0.3s ease;
+  cursor: pointer;
+  align-self: center;
 }
 
 .btn:hover {
@@ -68,7 +51,7 @@
 
 .btn:active {
   color: #ffffff;
-  background-color: #FFB6C1;
+  background-color: #ffa0af;
   border-color: #ffffff;
   transition: background-color 0s ease;
 }
@@ -79,4 +62,34 @@
 
 .linkStyle:hover {
   color: #ff1c77;
+}
+
+@media (max-width: 425px) {
+  .divButton {
+    padding: 3rem 2rem;
+    width: 85%;
+    height: 60vh;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .btn {
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px ) and (min-width: 426px) {
+  .divButton {
+    padding: 3rem 3rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px)  {
+  .divButton {
+    width: 65%;
+  }
 }
