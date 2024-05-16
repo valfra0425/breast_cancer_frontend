@@ -1,0 +1,105 @@
+.main {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidebackground {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 50%;
+}
+
+.message {
+    padding: 15px 30px;
+    background-color: white;
+    z-index: 1;
+    width: 60%;
+    border-radius: 20px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+}
+
+.button:active {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.closeButton {
+    position: relative;
+    align-self: end;
+    padding: 5px 15px;
+    color: #000;
+    background-color: #fff;
+    border-style: solid;
+    border-color: #000;
+    border-width: 1px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.closeButton:hover {
+    background-color: #ff1c77;
+    color: #fff;
+    border-color: #fff;
+}
+
+.closeButton:active {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+@media (max-width: 425px) {
+    .message {
+        padding: 15px 20px 10px 20px;
+        width: 80%;
+    }
+
+    .h1 {
+        margin-bottom: 15px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .button {
+        padding: 10px 40px;
+    }
+
+    .closeButton {
+        padding: 3px 15px;
+        font-weight: 400;
+        border: none;
+        margin-right: -20px;
+        margin-top: -10px;
+    }
+
+    .closeButton:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #000;
+    }
+}
+
+@media (max-width: 768px ) and (min-width: 426px) {
+    .message {
+        width: 75%;
+    }
+  }
