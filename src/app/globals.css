@@ -112,13 +112,12 @@ body {
   background-color: #ff1c77;
   border-color: #ffffff;
   transition: background-color 0.3s ease;
+  transform: scale(1.05);
 }
 
 .button:active {
-  color: #ffffff;
-  background-color: #ffa0af;
-  border-color: #ffffff;
   transition: background-color 0.3s ease;
+  transform: scale(0.95);
 }
 
 a {
