@@ -11,12 +11,6 @@
   text-align: justify;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .divButton {
   display: flex;
   align-items: start;

@@ -1,0 +1,101 @@
+.mb {
+    margin-bottom: 1rem;
+}
+
+.inputError {
+    margin-top: 1rem;
+    color: #ff0000;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+.divForm {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    width: 75dvw;
+    background-color: #ffa0af;
+    border-radius: 30px;
+    padding: 3rem;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.h1 {
+    text-align: center;
+    align-self: center;
+    color: #ffffff;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.inputSize {
+    width: 30%;
+}
+
+.fieldset {
+    border: 2px solid #ffffff;
+    padding: 1em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.marginInput {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.legend {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.radioDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.mf {
+    margin-left: 0.5rem;
+}
+
+.input {
+    background-color: #ffa0af;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 0px 3px;
+}
+
+.inputFileDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputFile {
+    color: #ffffff;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    background-color: #ff5599;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: large;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    align-self: center;
+}
