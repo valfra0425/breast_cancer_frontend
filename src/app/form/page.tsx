@@ -21,9 +21,9 @@ export default function Form() {
 
     return (
         <main className={styles.main}>
-            <div className={styles.divForm}>
+            <div className={`${styles.divForm} ${styles.mb}`}>
                 <h1 className={`${styles.h1} ${styles.mb}`}>Formulário de submissão</h1>
-                <p className={styles.mb}> <strong>Atenção:</strong> Ao preencher os dados deste formulário, você estará contribuindo para a melhoria da precisão do nosso modelo de imagem, ajudando a garantir diagnósticos mais confiáveis. Estamos comprometidos com a proteção da sua privacidade e asseguramos que seus dados serão utilizados de forma anônima, sem qualquer associação à sua identidade.</p>
+                <p className={`${styles.mb} ${styles.p}`}> <strong>Atenção:</strong> Ao preencher os dados deste formulário, você estará contribuindo para a melhoria da precisão do nosso modelo de imagem, ajudando a garantir diagnósticos mais confiáveis. Estamos comprometidos com a proteção da sua privacidade e asseguramos que seus dados serão utilizados de forma anônima, sem qualquer associação à sua identidade.</p>
                 <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 
                     <fieldset className={`${styles.fieldset} ${styles.inputSize} ${styles.radioInputDiv} ${styles.mb}`}>
@@ -49,20 +49,20 @@ export default function Form() {
 
                     <fieldset className={`${styles.fieldset} ${styles.inputSize} ${styles.radioInputDiv} ${styles.mb}`}>
                         <legend className={styles.legend}>Qual é a orientação da imagem?</legend>
-                        <div className={styles.radioDiv}>
-                            <div>
+                        <div className={`${styles.radioDiv} ${styles.radioDivSM}`}>
+                            <div className={styles.radioDivItem}>
                                 <input type="radio" id="mlo" value={"MLO"} {...register("view")} />
                                 <label htmlFor="mlo" className={styles.mf}>MLO</label>
                             </div>
-                            <div>
+                            <div className={styles.radioDivItem}>
                                 <input type="radio" id="cc" value={"CC"} {...register("view")} />
                                 <label htmlFor="cc" className={styles.mf}>CC</label>
                             </div>
-                            <div>
+                            <div className={styles.radioDivItem}>
                                 <input type="radio" id="at" value={"AT"} {...register("view")} />
                                 <label htmlFor="at" className={styles.mf}>AT</label>
                             </div>
-                            <div>
+                            <div className={styles.radioDivItem}>
                                 <input type="radio" id="ml" value={"ML"} {...register("view")} />
                                 <label htmlFor="ml" className={styles.mf}>ML</label>
                             </div>
@@ -104,7 +104,7 @@ export default function Form() {
                         {errors.biopsy && <span className={styles.inputError}>{errors.biopsy.message}</span>}
                     </fieldset>
 
-                    <p className={styles.mb}>Se você já teve os resultados da sua mamografia analisados por um médico, por favor, responda às perguntas abaixo. Caso contrário, pode deixá-las em branco.</p>
+                    <p className={`${styles.mb} ${styles.p}`}>Se você já teve os resultados da sua mamografia analisados por um médico, por favor, responda às perguntas abaixo. Caso contrário, pode deixá-las em branco.</p>
                     <fieldset className={`${styles.fieldset} ${styles.inputSize} ${styles.radioInputDiv} ${styles.mb}`}>
                         <legend className={styles.legend}>O resultado da sua mamográfia foi positivo ou negativo para câncer?</legend>
                         <div className={styles.radioDiv}>
@@ -147,13 +147,13 @@ export default function Form() {
                         </div>
                     </fieldset>
 
-                    <div className={styles.mb}>
+                    <div className={`${styles.mb} ${styles.inputFileDiv}`}>
                         <Controller
                             name="image"
                             control={control}
                             render={({ field: { onChange, ref } }) => (
                                 <>
-                                    <label htmlFor="myfile" className="button">Escolha um arquivo</label>
+                                    <label htmlFor="myfile" className={`button ${styles.button}`}>Escolha um arquivo</label>
                                     <input
                                         type="file"
                                         id="myfile"
@@ -165,8 +165,8 @@ export default function Form() {
                                         }}
                                         ref={ref}
                                     />
-                                    <span id="file-name" className={styles.mf}>{fileNama}</span>
-                                    {errors.image && <p className={styles.inputError}>{errors.image.message?.toString()}</p>}
+                                    <span id="file-name" className={styles.inputFileSpan}>{fileNama}</span>
+                                    {errors.image && <p className={`${styles.inputError} ${styles.p}`}>{errors.image.message?.toString()}</p>}
                                 </>
                             )}
                         />

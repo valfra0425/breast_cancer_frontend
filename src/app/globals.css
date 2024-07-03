@@ -135,6 +135,16 @@ a:hover {
   justify-content: center;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
