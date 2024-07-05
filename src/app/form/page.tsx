@@ -5,13 +5,18 @@ import { ChangeEvent, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { formData, formDataSchema } from "../utils/definitions";
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 
 export default function Form() {
     const { register, control, handleSubmit, formState: { errors } } = useForm<formData>({ resolver: zodResolver(formDataSchema) });
     const [fileNama, setFileName] = useState<string | undefined>();
+    const router = useRouter();
 
     const onSubmit = (data: formData) => {
-        return console.log(data)
+        let result = Math.floor(Math.random() * 2);
+        console.log(data)
+        router.push(`/result/${result}`);
+        console.log(data)
     }
 
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
