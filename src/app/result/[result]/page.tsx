@@ -14,9 +14,6 @@ export default function Result({ params }: { params: { result: string } }) {
 
   const result = param === '1' ? "Positivo" : "Negativo";
 
-  // 1 para True e 0 para False
-  // fazer um render condicional para qulaquer um desses valores
-
   return (
     <main className={styles.main}>
       <div className={`${styles.div} center`}>
